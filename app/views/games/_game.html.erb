@@ -1,0 +1,7 @@
+<li class="game-li">
+  <h2><%= game.name %></h2>
+  <% if !game.image_url.nil? %>
+    <%= link_to(image_tag(game.image_url, class: "index-game-image"), game) %>
+  <% end %>
+  <h5><%= game.intro %></h5>
+</li>

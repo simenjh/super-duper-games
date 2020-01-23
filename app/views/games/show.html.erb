@@ -1,0 +1,11 @@
+<% content_for(:special_content) do %>
+  <h2><%= @game.name %></h2>
+
+  <%= image_tag(@game.image_url, class: "show-game-image") %>
+
+  <p><%= @game.description %></p>
+
+  <%= button_to "Play the game", playthroughs_create_path, params: { playthrough: { game_id: @game.id } } %>
+
+  <%= link_to 'Back to catalog', games_path %>
+<% end %>

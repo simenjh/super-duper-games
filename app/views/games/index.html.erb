@@ -1,0 +1,11 @@
+<% content_for :special_content do %>
+  <h1>Catalog</h1>
+  <br/>
+  <ul id="games-ul">
+    <% @games.each do |game| %>
+      <%= render game %>
+    <% end %>
+  </ul>
+<% end %>
+
+

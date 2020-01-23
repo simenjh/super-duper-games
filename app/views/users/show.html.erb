@@ -1,0 +1,12 @@
+<% content_for(:special_content) do %>
+  <h1><%= @user.username %></h1>
+
+  <h2>Achievements</h2>
+  <ul>
+    <% @user.achievements.each do |achievement| %>
+      <li>
+        <%= achievement.name %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

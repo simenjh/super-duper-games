@@ -18,11 +18,9 @@ class User < ApplicationRecord
   def update_three_in_a_row(game_id)
     @three_in_a_row = Achievement.find_by(name: "3 in a row")
     if self.achievements.find_by(id: @three_in_a_row.id).nil?
-      #playthroughs = self.playthroughs.includes(:game)
       if self.playthroughs.count >= 3
         playthroughs = self.playthroughs.includes(:game).last(3)
         playthroughs.each do |p|
-          byebug
           return unless p.game.id == Integer(game_id)
         end
         self.achievements << @three_in_a_row

@@ -9,14 +9,14 @@
 Game.create!(
     name: "Grand Theft Auto: San Andreas",
     intro: "Holy shit! He ran that poor old woman over with his car!",
-    description: "The baddest game there is! Everyone's worst nightmare! Except the teenage boys playing this game!",
+    description: "The baddest game there is! Parents' worst nightmare. You think you can keep your children from playing it? Think again!",
     image_url: "https://i.ibb.co/zxKtLzd/gta-san-andreas.jpg"
 )
 
 Game.create!(
-    name: "Harry Potter",
+    name: "Harry Potter and the Philosopher's Stone",
     intro: "Have you seen that guy's face!?",
-    description: "The worst graphics in the whole damn history of game making",
+    description: "The best graphics in the whole damn history of game making",
     image_url: "https://i.ibb.co/7yn8bbB/harry-potter-malfoy.jpg"
 )
 
@@ -29,13 +29,16 @@ Game.create!(
 
 
 Achievement.create!(
-    name: "3 in a row"
+    name: "3 in a row",
+    image_url: "https://i.ibb.co/54SxSPS/three-in-a-row.png"
 )
 
 Achievement.create!(
-    name: "Big gainer"
+    name: "Big gainer",
+    image_url: "https://i.ibb.co/HHVpSsR/big-gainer.jpg"
 )
 
 Achievement.create!(
-    name: "Explorer"
+    name: "Explorer",
+    image_url: "https://i.ibb.co/PF2Lv43/explorer.jpg"
 )

@@ -7,9 +7,9 @@
   <br/>
   <h4>
     You can browse our <%= link_to "catalog", games_path %>,
-    <%= link_to "logging in", login_path %>
+    <%= link_to "login", login_path %>
     or
-    <%= link_to "signing up", new_user_path %>
+    <%= link_to "signup", new_user_path %>
     to get access to the staggering count of <%= pluralize(Game.count, "game") %>
   </h4>
 <% end %>

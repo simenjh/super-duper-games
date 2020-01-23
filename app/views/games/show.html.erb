@@ -5,7 +5,8 @@
 
   <p><%= @game.description %></p>
 
-  <%= button_to "Play the game", game_create_playthrough_path, params: { id: @game.id } %>
+  <%= button_to "Play game", game_create_playthrough_path, params: { id: @game.id }, class: "btn btn-primary" %>
 
+  <br/>
   <%= link_to 'Back to catalog', games_path %>
 <% end %>

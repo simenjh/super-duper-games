@@ -1,12 +1,8 @@
 <% content_for(:special_content) do %>
   <h1><%= @user.username %></h1>
-
-  <h2>Achievements</h2>
-  <ul>
-    <% @user.achievements.each do |achievement| %>
-      <li>
-        <%= achievement.name %>
-      </li>
-    <% end %>
+  <br/>
+  <h2>Glorious Achievements</h2>
+  <ul id="achievements-ul">
+    <%= render partial: "achievement", collection: @user.achievements, as: :achievement %>
   </ul>
 <% end %>

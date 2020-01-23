@@ -5,8 +5,12 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-      <%= link_to("Catalog", games_path) %>
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to "Catalog", games_path, class: "nav-link" %>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
         <% if logged_in? %>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= current_user.username %></a>

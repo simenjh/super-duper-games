@@ -13,6 +13,7 @@ html {
   overflow-y: scroll;
 }
 
+
 body {
   display: flex;
   flex-direction: column;
@@ -54,23 +55,6 @@ textarea {
 
 
 
-a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
-}
-
-
-#notice {
-  color: green;
-}
 
 .field_with_errors {
   padding: 2px;
@@ -99,5 +83,10 @@ a {
     font-size: 12px;
     list-style: square;
   }
+}
+
+
+.submit-button {
+  margin-top: 10px;
 }
 

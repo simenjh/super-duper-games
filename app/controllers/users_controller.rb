@@ -1,27 +1,25 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show]
+  before_action :redirect_to_catalog_if_logged_in, only: [:new, :create]
 
 
-  # GET /users/1
   def show
   end
 
-  # GET /users/new
   def new
     @user = User.new
   end
 
-  # GET /users/1/edit
   def edit
   end
 
-  # POST /users
   def create
     @user = User.new(user_params)
 
     if @user.save
       log_in(@user)
-      redirect_to @user, notice: 'User was successfully created.'
+      flash[:success] = 'User was successfully created.'
+      redirect_to games_path
     else
       render :new
     end

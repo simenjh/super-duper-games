@@ -1,15 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
   <div class="container">
-    <a class="navbar-brand" href="#">
-      Super Duper Games
-    </a>
+    <%= link_to "Super Duper Games", root_path, class: "navbar-brand" %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-      <% if logged_in? %>
-        <%= link_to("Catalog", games_path) %>
-      <% end %>
+      <%= link_to("Catalog", games_path) %>
       <ul class="navbar-nav ml-auto">
         <% if logged_in? %>
           <li class="nav-item dropdown">

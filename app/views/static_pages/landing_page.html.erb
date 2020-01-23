@@ -1,0 +1,15 @@
+<% content_for(:special_content) do %>
+  <h2>Welcome to Super Duper Games!</h2>
+  <br/>
+  <h4>Among the games you can play is:</h4>
+  <%= image_tag @game.image_url, class: "show-game-image" %>
+  <br/>
+  <br/>
+  <h4>
+    You can browse our <%= link_to "catalog", games_path %>,
+    <%= link_to "logging in", login_path %>
+    or
+    <%= link_to "signing up", new_user_path %>
+    to get access to the staggering count of <%= pluralize(Game.count, "game") %>
+  </h4>
+<% end %>

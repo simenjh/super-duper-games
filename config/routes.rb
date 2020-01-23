@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
 
-  post "playthroughs/create", to: "playthroughs#create"
+  root to: "static_pages#landing_page"
+
+  post "game/create_playthrough", to: "games#create_playthrough"
 end
 
 

@@ -20,7 +20,7 @@ class User < ApplicationRecord
     if self.achievements.find_by(id: @three_in_a_row.id).nil?
       #playthroughs = self.playthroughs.includes(:game)
       if self.playthroughs.count >= 3
-        playthroughs = self.playthroughs.last(3).includes(:game)
+        playthroughs = self.playthroughs.includes(:game).last(3)
         playthroughs.each do |p|
           byebug
           return unless p.game.id == Integer(game_id)

@@ -3,6 +3,7 @@
 
   <%= image_tag @game.image_url, class: "show-game-image" %>
 
+  <br/><br/>
   <p><%= @game.description %></p>
 
   <%= button_to "Play game", game_create_playthrough_path, params: { id: @game.id }, class: "btn btn-primary" %>

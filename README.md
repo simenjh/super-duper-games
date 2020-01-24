@@ -17,3 +17,5 @@ Install gems:
 Start the app:
 
     rails server
+
+#### Point your browser to: [http://localhost:3000](http://localhost:3000)

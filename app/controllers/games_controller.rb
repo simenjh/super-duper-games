@@ -16,9 +16,9 @@ class GamesController < ApplicationController
     game_id = @game.id
 
     @playthrough = Playthrough.new(score: random_score, user_id: current_user.id, game_id: game_id)
-    current_user.update_attribute(:score, current_user.score + random_score)
 
     if @playthrough.save
+      current_user.update_attribute(:score, current_user.score + random_score)
       current_user.update_user_achievements(game_id)
       flash[:success] = "Hopefully you had fun playing the game!"
       redirect_to games_path

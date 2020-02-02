@@ -5,8 +5,7 @@
 * Ruby 2.5.5
 * Rails 5.2.4
 
-##Installation
-Install gems: 
+##Install gems: 
  
     bundle 
     

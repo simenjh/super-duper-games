@@ -1,11 +1,11 @@
 # Super Duper Games
 
-###Uses
+### Requirements
 
 * Ruby 2.5.5
 * Rails 5.2.4
 
-##Install gems: 
+##I nstall gems: 
  
     bundle 
     
